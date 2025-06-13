@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    @apply bg-black/10 backdrop-blur-xl border border-white/10;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .glass-morphism-dark {
+    @apply bg-[#0D1117]/40 backdrop-blur-xl border border-[#0FA0CE]/20;
+    box-shadow: 0 8px 32px 0 rgba(15, 160, 206, 0.15);
+  }
+
+  .terminal-text {
+    animation: typing 2s steps(40, end);
+  }
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-text > div {
+  animation: typing 0.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Create staggered animations for each line */
+.terminal-text > div:nth-child(1) { animation-delay: 3.2s; }
+.terminal-text > div:nth-child(2) { animation-delay: 3.4s; }
+.terminal-text > div:nth-child(3) { animation-delay: 3.7s; }
+.terminal-text > div:nth-child(4) { animation-delay: 4.0s; }
+.terminal-text > div:nth-child(5) { animation-delay: 4.3s; }
+.terminal-text > div:nth-child(6) { animation-delay: 4.6s; }
+.terminal-text > div:nth-child(7) { animation-delay: 4.9s; }
+.terminal-text > div:nth-child(8) { animation-delay: 5.2s; }
+.terminal-text > div:nth-child(9) { animation-delay: 5.5s; }
+.terminal-text > div:nth-child(10) { animation-delay: 5.8s; }
+.terminal-text > div:nth-child(11) { animation-delay: 6.1s; }
+.terminal-text > div:nth-child(12) { animation-delay: 6.4s; }
+.terminal-text > div:nth-child(13) { animation-delay: 6.7s; }
+.terminal-text > div:nth-child(14) { animation-delay: 7.0s; }
+.terminal-text > div:nth-child(15) { animation-delay: 7.3s; }
+.terminal-text > div:nth-child(16) { animation-delay: 7.6s; }
+.terminal-text > div:nth-child(17) { animation-delay: 7.9s; }
+.terminal-text > div:nth-child(18) { animation-delay: 8.2s; }
+.terminal-text > div:nth-child(19) { animation-delay: 8.5s; }
+.terminal-text > div:nth-child(20) { animation-delay: 8.8s; }
+.terminal-text > div:nth-child(21) { animation-delay: 9.1s; }
+.terminal-text > div:nth-child(22) { animation-delay: 9.4s; }
+.terminal-text > div:nth-child(23) { animation-delay: 9.7s; }
+.terminal-text > div:nth-child(24) { animation-delay: 10.0s; }
+.terminal-text > div:nth-child(25) { animation-delay: 10.3s; }
+.terminal-text > div:nth-child(26) { animation-delay: 10.6s; }
+.terminal-text > div:nth-child(27) { animation-delay: 10.9s; }
+.terminal-text > div:nth-child(28) { animation-delay: 11.2s; }
+.terminal-text > div:nth-child(29) { animation-delay: 11.5s; }
+.terminal-text > div:nth-child(30) { animation-delay: 11.8s; }
+.terminal-text > div:nth-child(31) { animation-delay: 12.1s; }
+.terminal-text > div:nth-child(32) { animation-delay: 12.4s; }
+.terminal-text > div:nth-child(33) { animation-delay: 12.7s; }
+.terminal-text > div:nth-child(34) { animation-delay: 13.0s; }
+.terminal-text > div:nth-child(35) { animation-delay: 13.3s; }
+.terminal-text > div:nth-child(36) { animation-delay: 13.6s; }
+.terminal-text > div:nth-child(37) { animation-delay: 13.9s; }
+.terminal-text > div:nth-child(38) { animation-delay: 14.2s; }
+.terminal-text > div:nth-child(39) { animation-delay: 14.5s; }
+.terminal-text > div:nth-child(40) { animation-delay: 14.8s; }
+.terminal-text > div:nth-child(41) { animation-delay: 15.1s; }
+.terminal-text > div:nth-child(42) { animation-delay: 15.4s; }
+.terminal-text > div:nth-child(43) { animation-delay: 15.7s; }
+.terminal-text > div:nth-child(44) { animation-delay: 16.0s; }
+.terminal-text > div:nth-child(45) { animation-delay: 16.3s; }
+.terminal-text > div:nth-child(46) { animation-delay: 16.6s; }
+.terminal-text > div:nth-child(47) { animation-delay: 16.9s; }
+.terminal-text > div:nth-child(48) { animation-delay: 17.2s; }
+.terminal-text > div:nth-child(49) { animation-delay: 17.5s; }
+.terminal-text > div:nth-child(50) { animation-delay: 17.8s; }
+.terminal-text > div:nth-child(51) { animation-delay: 18.1s; }
+.terminal-text > div:nth-child(52) { animation-delay: 18.4s; }
+.terminal-text > div:nth-child(53) { animation-delay: 18.7s; }
+.terminal-text > div:nth-child(54) { animation-delay: 19.0s; }
+.terminal-text > div:nth-child(55) { animation-delay: 19.3s; }
+.terminal-text > div:nth-child(56) { animation-delay: 19.6s; }
+.terminal-text > div:nth-child(57) { animation-delay: 19.9s; }
+.terminal-text > div:nth-child(58) { animation-delay: 20.2s; }
+.terminal-text > div:nth-child(59) { animation-delay: 20.5s; }
+.terminal-text > div:nth-child(60) { animation-delay: 20.8s; }
+.terminal-text > div:nth-child(61) { animation-delay: 21.1s; }
+.terminal-text > div:nth-child(62) { animation-delay: 21.4s; }
+.terminal-text > div:nth-child(63) { animation-delay: 21.7s; }
+.terminal-text > div:nth-child(64) { animation-delay: 22.0s; }
+.terminal-text > div:nth-child(65) { animation-delay: 22.3s; }
+.terminal-text > div:nth-child(66) { animation-delay: 22.6s; }
+.terminal-text > div:nth-child(67) { animation-delay: 22.9s; }
+.terminal-text > div:nth-child(68) { animation-delay: 23.2s; }
+.terminal-text > div:nth-child(69) { animation-delay: 23.5s; }
+.terminal-text > div:nth-child(70) { animation-delay: 23.8s; }
+.terminal-text > div:nth-child(71) { animation-delay: 24.1s; }
+.terminal-text > div:nth-child(72) { animation-delay: 24.4s; }
+.terminal-text > div:nth-child(73) { animation-delay: 24.7s; }
+.terminal-text > div:nth-child(74) { animation-delay: 25.0s; }
+.terminal-text > div:nth-child(75) { animation-delay: 25.3s; }
+.terminal-text > div:nth-child(76) { animation-delay: 25.6s; }
+.terminal-text > div:nth-child(77) { animation-delay: 25.9s; }
+.terminal-text > div:nth-child(78) { animation-delay: 26.2s; }
+.terminal-text > div:nth-child(79) { animation-delay: 26.5s; }
+.terminal-text > div:nth-child(80) { animation-delay: 26.8s; }
+.terminal-text > div:nth-child(81) { animation-delay: 27.1s; }
+.terminal-text > div:nth-child(82) { animation-delay: 27.4s; }
+.terminal-text > div:nth-child(83) { animation-delay: 27.7s; }
+.terminal-text > div:nth-child(84) { animation-delay: 28.0s; }
+.terminal-text > div:nth-child(85) { animation-delay: 28.3s; }
+.terminal-text > div:nth-child(86) { animation-delay: 28.6s; }
+.terminal-text > div:nth-child(87) { animation-delay: 28.9s; }
+.terminal-text > div:nth-child(88) { animation-delay: 29.2s; }
+.terminal-text > div:nth-child(89) { animation-delay: 29.5s; }
+.terminal-text > div:nth-child(90) { animation-delay: 29.8s; }
+.terminal-text > div:nth-child(91) { animation-delay: 30.1s; }
+.terminal-text > div:nth-child(92) { animation-delay: 30.4s; }
+.terminal-text > div:nth-child(93) { animation-delay: 30.7s; }
+.terminal-text > div:nth-child(94) { animation-delay: 31.0s; }
+.terminal-text > div:nth-child(95) { animation-delay: 31.3s; }
+.terminal-text > div:nth-child(96) { animation-delay: 31.6s; }
+.terminal-text > div:nth-child(97) { animation-delay: 31.9s; }
+.terminal-text > div:nth-child(98) { animation-delay: 32.2s; }
+.terminal-text > div:nth-child(99) { animation-delay: 32.5s; }
+.terminal-text > div:nth-child(100) { animation-delay: 32.8s; }
+.terminal-text > div:nth-child(101) { animation-delay: 33.1s; }
+.terminal-text > div:nth-child(102) { animation-delay: 33.4s; }
+.terminal-text > div:nth-child(103) { animation-delay: 33.7s; }
+.terminal-text > div:nth-child(104) { animation-delay: 34.0s; }
+.terminal-text > div:nth-child(105) { animation-delay: 34.3s; }
+.terminal-text > div:nth-child(106) { animation-delay: 34.6s; }
+.terminal-text > div:nth-child(107) { animation-delay: 34.9s; }
+.terminal-text > div:nth-child(108) { animation-delay: 35.2s; }
+.terminal-text > div:nth-child(109) { animation-delay: 35.5s; }
+.terminal-text > div:nth-child(110) { animation-delay: 35.8s; }
+.terminal-text > div:nth-child(111) { animation-delay: 36.1s; }
+.terminal-text > div:nth-child(112) { animation-delay: 36.4s; }
+.terminal-text > div:nth-child(113) { animation-delay: 36.7s; }
+.terminal-text > div:nth-child(114) { animation-delay: 37.0s; }
+.terminal-text > div:nth-child(115) { animation-delay: 37.3s; }
+.terminal-text > div:nth-child(116) { animation-delay: 37.6s; }
+.terminal-text > div:nth-child(117) { animation-delay: 37.9s; }
+.terminal-text > div:nth-child(118) { animation-delay: 38.2s; }
+.terminal-text > div:nth-child(119) { animation-delay: 38.5s; }
+.terminal-text > div:nth-child(120) { animation-delay: 38.8s; }
+
+.terminalScroll {
+  scroll-behavior: smooth;
+}
+
+@keyframes typeCommand {
+  0% { content: ""; }
+  5% { content: "p"; }
+  10% { content: "py"; }
+  15% { content: "pyt"; }
+  20% { content: "pyth"; }
+  25% { content: "pytho"; }
+  30% { content: "python"; }
+  35% { content: "python3"; }
+  40% { content: "python3 "; }
+  45% { content: "python3 m"; }
+  50% { content: "python3 ma"; }
+  55% { content: "python3 mai"; }
+  60% { content: "python3 main"; }
+  65% { content: "python3 main."; }
+  70% { content: "python3 main.p"; }
+  75% { content: "python3 main.py"; }
+  100% { content: "python3 main.py"; }
+}
+
+.command-type::before {
+  content: "";
+  animation: typeCommand 3s steps(15, end) forwards;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
